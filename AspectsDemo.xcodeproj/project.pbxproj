@@ -15,6 +15,11 @@
 		6014E94F230CCE39003E18D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E94E230CCE39003E18D1 /* main.m */; };
 		6014E959230CCE39003E18D1 /* AspectsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E958230CCE39003E18D1 /* AspectsDemoTests.m */; };
 		6014E964230CCE39003E18D1 /* AspectsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E963230CCE39003E18D1 /* AspectsDemoUITests.m */; };
+		6014E97F230CCEF2003E18D1 /* AspectTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E972230CCEF2003E18D1 /* AspectTracker.m */; };
+		6014E980230CCEF2003E18D1 /* NSInvocation+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E975230CCEF2003E18D1 /* NSInvocation+Aspects.m */; };
+		6014E981230CCEF2003E18D1 /* AspectsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E977230CCEF2003E18D1 /* AspectsContainer.m */; };
+		6014E982230CCEF2003E18D1 /* AspectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E978230CCEF2003E18D1 /* AspectInfo.m */; };
+		6014E983230CCEF2003E18D1 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6014E97D230CCEF2003E18D1 /* Aspects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,18 @@
 		6014E95F230CCE39003E18D1 /* AspectsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AspectsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6014E963230CCE39003E18D1 /* AspectsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectsDemoUITests.m; sourceTree = "<group>"; };
 		6014E965230CCE39003E18D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6014E972230CCEF2003E18D1 /* AspectTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspectTracker.m; sourceTree = "<group>"; };
+		6014E973230CCEF2003E18D1 /* AspectsConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectsConstant.h; sourceTree = "<group>"; };
+		6014E975230CCEF2003E18D1 /* NSInvocation+Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Aspects.m"; sourceTree = "<group>"; };
+		6014E976230CCEF2003E18D1 /* NSInvocation+Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Aspects.h"; sourceTree = "<group>"; };
+		6014E977230CCEF2003E18D1 /* AspectsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspectsContainer.m; sourceTree = "<group>"; };
+		6014E978230CCEF2003E18D1 /* AspectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspectInfo.m; sourceTree = "<group>"; };
+		6014E979230CCEF2003E18D1 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		6014E97A230CCEF2003E18D1 /* AspectToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectToken.h; sourceTree = "<group>"; };
+		6014E97B230CCEF2003E18D1 /* AspectTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectTracker.h; sourceTree = "<group>"; };
+		6014E97C230CCEF2003E18D1 /* AspectsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectsContainer.h; sourceTree = "<group>"; };
+		6014E97D230CCEF2003E18D1 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		6014E97E230CCEF2003E18D1 /* AspectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,7 @@
 		6014E93E230CCE38003E18D1 /* AspectsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6014E971230CCEF2003E18D1 /* Aspects */,
 				6014E93F230CCE38003E18D1 /* AppDelegate.h */,
 				6014E940230CCE38003E18D1 /* AppDelegate.m */,
 				6014E942230CCE38003E18D1 /* ViewController.h */,
@@ -130,6 +148,33 @@
 				6014E965230CCE39003E18D1 /* Info.plist */,
 			);
 			path = AspectsDemoUITests;
+			sourceTree = "<group>";
+		};
+		6014E971230CCEF2003E18D1 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				6014E972230CCEF2003E18D1 /* AspectTracker.m */,
+				6014E973230CCEF2003E18D1 /* AspectsConstant.h */,
+				6014E974230CCEF2003E18D1 /* Category */,
+				6014E977230CCEF2003E18D1 /* AspectsContainer.m */,
+				6014E978230CCEF2003E18D1 /* AspectInfo.m */,
+				6014E979230CCEF2003E18D1 /* Aspects.h */,
+				6014E97A230CCEF2003E18D1 /* AspectToken.h */,
+				6014E97B230CCEF2003E18D1 /* AspectTracker.h */,
+				6014E97C230CCEF2003E18D1 /* AspectsContainer.h */,
+				6014E97D230CCEF2003E18D1 /* Aspects.m */,
+				6014E97E230CCEF2003E18D1 /* AspectInfo.h */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		6014E974230CCEF2003E18D1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6014E975230CCEF2003E18D1 /* NSInvocation+Aspects.m */,
+				6014E976230CCEF2003E18D1 /* NSInvocation+Aspects.h */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +309,12 @@
 			files = (
 				6014E944230CCE38003E18D1 /* ViewController.m in Sources */,
 				6014E94F230CCE39003E18D1 /* main.m in Sources */,
+				6014E980230CCEF2003E18D1 /* NSInvocation+Aspects.m in Sources */,
+				6014E982230CCEF2003E18D1 /* AspectInfo.m in Sources */,
+				6014E981230CCEF2003E18D1 /* AspectsContainer.m in Sources */,
+				6014E97F230CCEF2003E18D1 /* AspectTracker.m in Sources */,
 				6014E941230CCE38003E18D1 /* AppDelegate.m in Sources */,
+				6014E983230CCEF2003E18D1 /* Aspects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
